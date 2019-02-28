@@ -1,0 +1,19 @@
+<fieldset>
+    <meta charset="UTF-8" />
+    <legend>用户登录</legend>
+    <form action="login.php" name="Loginform" method="post" onsubmit="return InputCheck(this)">
+        <p>
+            <label for="stuname" class="label">用户名：</label>
+            <input type="text" id="stuname" class="input" name="stuname" />
+        </p>
+        <p>
+            <label for="stupassword" class="label">密码：</label>
+            <input type="password" id="stupassword" class="input" name="stupassword" />
+            <a href="stuFindCode.html">忘记密码?点此找回</a>
+        </p>
+        <p>
+            <input type="submit" name="login" value="登录" class="left" />
+            <a href="../Reg/reg.html">还没有账号？点此注册</a>
+        </p>
+    </form>
+</fieldset>
