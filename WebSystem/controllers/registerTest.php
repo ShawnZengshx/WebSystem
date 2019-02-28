@@ -2,6 +2,8 @@
 $phone = $email = $password = "";
 $phoneErr = $emailErr = $passwordErr = "";
 $success = true;
+session_start();
+include("../Mysql/MysqlConnect.php");
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
@@ -9,6 +11,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $phone = test_input($_POST["phone"]);
     $email = test_input($_POST["email"]);
     $emailpattern = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/";
+
     if(empty($_POST["phone"])){
         $phoneErr = "电话是必需的";
         $success = false;
@@ -38,7 +41,35 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         $success = false;
     }
     if($success){
-        header("location:../views/register.html");
+        //$_SESSION['stuname'] = $stuname;
+        $_SESSION['password'] = $password;
+        $_SESSION['email'] = $email;
+        //$_SESSION['idenid'] = $idenid;
+        //$_SESSION['stuface'] = $stuface;
+
+        //查询用户名是否已经存在
+        /*$sql_query = mysqli_query($conn, "select * from stu where stuname='$stuname' limit 1");
+        if(mysqli_fetch_array($sql_query)){
+            echo'错误：用户名',$stuname,'已存在.<a href ="javascript:history.back(-1);">返回</a>';
+            exit;
+        }*/
+
+        $mail_query = mysqli_query($conn,"select * from stu where stuemail = '$email' limit 1");
+        if(mysqli_fetch_array($mail_query)){
+            echo'错误：邮箱',$email,'已存在.<a href ="javascript:history.back(-1);">返回</a>';
+            exit;
+        }
+
+        $conn->close();  //关闭数据连接
+
+        sendemail($email);
+
+        echo "2秒后将自动跳转到验证界面".'<meta http-equiv="Refresh" content="2;URL=validate.html" />';
+        exit;
+
+
+
+        //header("location:../views/register.html");
     }
 }
 
@@ -48,6 +79,27 @@ function test_input($data)
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
     return $data;
+}
+
+function sendemail($email){
+    $to = $email;
+    $subject = "VerifyCode";
+    $message = "";
+    $code="123456780abcedfghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    $length = strlen($code);
+    for($i=0;$i<8;$i++){
+        $cd = mt_rand(0,$length -1);
+        $message .= $code[$cd];
+    }
+    //$message = "9kiwq1";
+    $_SESSION['valCode'] = $message;    //保存密钥
+    mail($to,$subject,$message);
+    echo "验证码已发送至邮箱，请注意查收！".'<br/>';
+}
+
+function resendEmail($email){
+    unset($_SESSION['valCode']); //删除之前保存的密钥
+    sendemail($email);
 }
 /**
  * Created by PhpStorm.
