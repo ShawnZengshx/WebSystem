@@ -41,9 +41,20 @@ echo "<form action=\"enrollment.php\" method=\"post\">
     <label>考试报名</label>
     <input type=\"submit\" name=\"submit\" value=\"报名\"/>
 </form>";
-echo '<a href="../Login/login.php?action=logout">注销</a>登录<br/>';
-?>
 
+echo "<form action=\"StuQueExam.php\" method=\"post\">
+    <label>查询考试报名信息</label>
+    <input type=\"submit\" name=\"getExamInfo\" value=\"查看\" class=\"input\" />
+</form>";
+echo "<form action=\"../StuGetGrade/StuQueryGrade.php\" method=\"post\">
+    <label>查询成绩</label>
+    <input type=\"submit\" name=\"queryGrade\" value=\"查询\" class=\"input\"/>
+</form>";
+echo "<form action=\"../controllers/stuLogout.php\" method=\"post\">
+    <input type=\"submit\" name=\"logout\" value=\"注销登录\" class=\"input\">
+</form>";
+
+?>
 
 
 
