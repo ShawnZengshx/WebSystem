@@ -4,6 +4,7 @@
  * User: cengshengxing
  * Date: 2019-02-28
  * Time: 08:08
+ * Func: 用于数据库的连接
  */
 
 $mysql_conf = array(

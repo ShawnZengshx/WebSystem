@@ -4,6 +4,7 @@
  * User: cengshengxing
  * Date: 2019-02-28
  * Time: 18:45
+ * Func: 进行用户密码的重设
  */
 
 include("../Mysql/MysqlConnect.php");

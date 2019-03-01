@@ -4,6 +4,7 @@
  * User: cengshengxing
  * Date: 2019-02-28
  * Time: 10:05
+ * Func: 用于检验邮箱验证码是否正确，并将正确的用户信息录入到数据库中
  */
 
 session_start();
@@ -33,7 +34,7 @@ $rs = $conn->query($sql_insert);
 if($rs){
     $conn->close();
     session_destroy();    //删除session
-    exit('注册成功！点击此处<a href="../Login/login.html">登录</a>');
+    exit('注册成功！点击此处<a href="../views/login.php">登录</a>');
 }else{
     echo'Error 数据添加失败：'.$conn->error.'<br/>';
     $conn->close();

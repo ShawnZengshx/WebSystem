@@ -4,6 +4,7 @@
  * User: cengshengxing
  * Date: 2019-02-28
  * Time: 10:05
+ * Func: 检测用户输入的用户名、邮箱以及身份证是否是重复的
  */
 
 include('../Mysql/MysqlConnect.php');
@@ -27,6 +28,13 @@ $_SESSION['stuface'] = $stuface;
 $sql_query = mysqli_query($conn, "select * from stu where stuname='$stuname' limit 1");
 if(mysqli_fetch_array($sql_query)){
     echo'错误：用户名',$stuname,'已存在.<a href ="javascript:history.back(-1);">返回</a>';
+    exit;
+}
+
+//查询身份证是否已经被注册
+$stuidenid = mysqli_query($conn,"select * from stu where stuidenid = '$idenid' limit 1");
+if(mysqli_fetch_array($stuidenid)){
+    echo '该身份证已经注册'.'<a href="javascript:history.back(-1)"></a>';
     exit;
 }
 

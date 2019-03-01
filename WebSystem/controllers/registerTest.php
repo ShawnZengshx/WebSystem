@@ -64,7 +64,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
         sendemail($email);
 
-        echo "2秒后将自动跳转到验证界面".'<meta http-equiv="Refresh" content="2;URL=validate.html" />';
+        echo "2秒后将自动跳转到验证界面".'<meta http-equiv="Refresh" content="2;URL=../Reg/validate.html" />';
         exit;
 
 
