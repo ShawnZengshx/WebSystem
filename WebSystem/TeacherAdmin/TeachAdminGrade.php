@@ -25,8 +25,8 @@
  * Time: 15:01
  */
 
+include("../Mysql/MysqlConnect.php");
 if(isset($_POST['uploadGrade'])){
-    include("../Mysql/MysqlConnect.php");
     $targetId = $_POST['targetId'];
     $grade = $_POST['grade'];
     $update_grade = "update stu set stugrade = '$grade' where stuid = '$targetId'";
@@ -41,5 +41,6 @@ if(isset($_POST['uploadGrade'])){
 }
 
 if(isset($_POST['logout'])){
+    $conn->close();
     echo '<script>alert("注销登录成功！");window.setTimeout(window.location.href="../Login/teacherLogin.html")</script>';
 }
