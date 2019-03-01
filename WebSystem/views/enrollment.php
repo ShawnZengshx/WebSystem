@@ -8,12 +8,13 @@
 
 <body>
 <form >
-    <label class="radio-inline">
+    <!--<label class="radio-inline">
         <input type="radio" name="optionsRadiosinline" id="optionsRadios3" value="option1" checked> 选项 1
     </label>
     <label class="radio-inline">
         <input type="radio" name="optionsRadiosinline" id="optionsRadios4"  value="option2"> 选项 2
-    </label>
+    </label> -->
+    <label for="examRoomSelect"><?php echo "选择考场" ?></label>
     <button class="btn" type="submit">submit</button>
 </form>
 </body>

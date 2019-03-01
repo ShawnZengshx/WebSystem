@@ -13,6 +13,7 @@ $logout = "update stu set logstatus='0' where stuid = '$logid'";
 $res = mysqli_query($conn, $logout);
 if($res){
     session_destroy();
+    $conn->close();
     echo '<script>alert("注销登录成功，即将返回登录界面");window.setTimeout(window.location.href="../views/login.php",2000)</script>';
     exit;
 }

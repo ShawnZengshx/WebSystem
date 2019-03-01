@@ -41,13 +41,14 @@ if(isset($_POST['go'])){
         $_SESSION['teachId'] = $teachId;
         setcookie('teachId',$teachId);
         //echo '<script>alert("登录成功！2秒后将跳转到用户界面")</script>';
-        echo '<meta http-equiv="Refresh" content="0.5;URL=../TeacherAdmin/TeachAdminGrade.php" />';
+        echo '<script>alert("登录成功！即将跳转");window.setTimeout(window.location.href="../TeacherAdmin/TeachAdminGrade.php")</script>';
 
         //echo '点击此处 <a href="teacherLogin.php?action=logout">注销</a> 登录<br/>';
         exit();
     }else{
         //echo"登录失败".'<a href="teacherLogin.html">点击此处重新登录</a>'.'<br/>';
-        echo"登录失败".'<meta http-equiv="Refresh" content="URL=teacherLogin.html"/>';
+        echo '<script>alert("登录失败！");history.go(-1)</script>';
+        exit;
     }
 
 
