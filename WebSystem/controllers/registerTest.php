@@ -1,6 +1,6 @@
 <?php
-$phone = $email = $password = "";
-$phoneErr = $emailErr = $passwordErr = "";
+$phone = $email = $password = $repassword = "";
+$phoneErr = $emailErr = $passwordErr  = $repasswordErr = "";
 $success = true;
 session_start();
 include("../Mysql/MysqlConnect.php");
@@ -10,6 +10,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $password = test_input($_POST["password"]);
     $phone = test_input($_POST["phone"]);
     $email = test_input($_POST["email"]);
+    $repassword = test_input($_POST["repassword"]);
+
     $emailpattern = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/";
 
     if(empty($_POST["phone"])){
@@ -38,6 +40,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     }
     if(!preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,}$/",$password)){
         $passwordErr = "请包含大小写字母，数字和特殊符号四类字符";
+        $success = false;
+    }
+    if($repassword != $password){
+        $repasswordErr = "两次输入密码不一致，请重新输入";
         $success = false;
     }
     if($success){

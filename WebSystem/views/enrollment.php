@@ -7,7 +7,7 @@
 </head>
 
 <body>
-<form >
+<form>
     <label class="radio-inline">
         <input type="radio" name="optionsRadiosinline" id="optionsRadios3" value="option1" checked> 选项 1
     </label>

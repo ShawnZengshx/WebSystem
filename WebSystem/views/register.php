@@ -14,9 +14,6 @@
     require '../controllers/registerTest.php';
 
 ?>
-<?php
-
-?>
 
 <body>
 <p><span class="error">* 必填字段。</span></p>
@@ -35,7 +32,7 @@
         <br>
         <button class="btn btn-primary" type="submit">submit</button>
     </form>
-<?php echo  $_POST["phone"]; ?>
+
 </body>
 <?php
 /**

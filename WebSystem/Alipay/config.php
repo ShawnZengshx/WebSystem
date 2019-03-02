@@ -10,7 +10,7 @@ $config = array (
 		'notify_url' => "http://外网可访问网关地址/alipay.trade.page.pay-PHP-UTF-8/notify_url.php",
 		
 		//同步跳转
-		'return_url' => "http://外网可访问网关地址/alipay.trade.page.pay-PHP-UTF-8/return_url.php",
+		'return_url' => "http://5291e8a2.ngrok.io/System/Alipay/return_url.php",
 
 		//编码格式
 		'charset' => "UTF-8",

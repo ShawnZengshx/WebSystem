@@ -10,7 +10,7 @@ $mysql_conf = array(
     'host' => '127.0.0.1',
     'db' => 'websql',
     'db_user' => 'root',
-    'db_pwd' => 'Zengshx@9869',
+    'db_pwd' => 'admin',
 );
 @$conn = new mysqli($mysql_conf['host'], $mysql_conf['db_user'], $mysql_conf['db_pwd'], $mysql_conf['db']);
 if(mysqli_connect_errno()){

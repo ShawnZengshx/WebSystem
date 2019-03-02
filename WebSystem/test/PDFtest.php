@@ -1,7 +1,7 @@
 <?php
 
 require_once ('../resource/TCPDF/tcpdf.php');
-
+require_once('../resource/TCPDF/tcpdf_barcodes_1d.php');
 
 /**
  * Created by PhpStorm.
@@ -14,14 +14,14 @@ require_once ('../resource/TCPDF/tcpdf.php');
 $pdf = new TCPDF('P', 'mm', 'A4', true, 'UTF-8', false);
 
 // 设置文档信息
-$pdf->SetCreator('Helloweba');
-$pdf->SetAuthor('yueguangguang');
-$pdf->SetTitle('Welcome to helloweba.com!');
+$pdf->SetCreator('ETS');
+$pdf->SetAuthor('ETS');
+$pdf->SetTitle('Confirm Letter');
 $pdf->SetSubject('TCPDF Tutorial');
 $pdf->SetKeywords('TCPDF, PDF, PHP');
 
 // 设置页眉和页脚信息
-$pdf->SetHeaderData('logo.png', 30, 'Helloweba.com', '致力于WEB前端技术在中国的应用',
+$pdf->SetHeaderData('logo.png', 30, 'Registration Confirmation', 'From ETS',
     array(0,64,255), array(0,64,128));
 $pdf->setFooterData(array(0,64,0), array(0,64,128));
 
@@ -51,9 +51,33 @@ $pdf->SetFont('stsongstdlight', '', 14);
 
 $pdf->AddPage();
 
-$str1 = '欢迎来到Helloweba.com';
-
+$str1 = '注意事项:';
+$content = date("Y/m/d");
+$name = "张皖渝";
+$age = "21";
+$ETScode = "0001111000";
+$idenid  = "340432039001";
+$pdf->Cell(30, 6, '考试日期', 1, 0);
+$pdf->Cell(120, 6, $content , 1, 1);
+$pdf->Cell(30, 6, '学生姓名', 1, 0);
+$pdf->Cell(120, 6, $name, 1, 1);
+$pdf->Cell(30, 6, "年龄", 1, 0);
+$pdf->Cell(120, 6, $age, 1, 1);
+$pdf->Cell(30, 6, 'ETS注册号', 1, 0);
+$pdf->Cell(120, 6, $ETScode, 1, 1);
+$pdf->Cell(30, 6, '证件号码', 1, 0);
+$pdf->Cell(120, 6, $idenid, 1, 1);
+$pdf->Ln(8);
 $pdf->Write(0,$str1,'', 0, 'L', true, 0, false, false, 0);
+$str2 = "• 中国大陆考生必须携带有效的二代居民身份证原件参加考试。这是唯一接受的身份证件。根据中华人民共和国相关法律，任何年 龄的公民，均可在户籍所在地申领居民身份证。请考生确认所持二代身份证仍在有效期内、芯片信息读取功能正常、本人当前相貌无重大改变（如整容、性别改变等）。否则，建议考生立即重新申请新的二代身份证。
+";
+$pdf->Write(0,$str2,'', 0, 'L', true, 0, false, false, 0);
+$str3 = "• 中国台湾考生必须携带有效的台湾地区居民往来大陆通行证原件或台湾居民居住证原件参加考试。";
+$str4 = "• 如果对身份证件的要求有任何疑问，请务必在考试日期前联络教育部考试中心托福网考®呼叫中心。";
+$pdf->Write(0,$str3,'', 0, 'L', true, 0, false, false, 0);
+$pdf->Write(0,$str4,'', 0, 'L', true, 0, false, false, 0);
+$pdf->write1DBarcode($ETScode, 'C128');
 
-//输出PDF
+
+
 $pdf->Output('t.pdf', 'I');
