@@ -1,13 +1,15 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: cengshengxing
- * Date: 2019-03-01
- * Time: 14:28
- */
-
-
-$temp = 1;
-var_dump($temp);
-$temp = (string)$temp;
-var_dump($temp);
+display: inline-block;
+width: 500px;
+position: relative;
+vertical-align: middle;
+padding: 0;
+overflow: hidden;
+background-color: #FFF;
+color: #555;
+border: 1px solid #aaa;
+text-shadow: none;
+border-radius: 4px;
+transition: box-shadow 0.25s ease;
+z-index: 2;
+margin:200px;
+height: 300px;

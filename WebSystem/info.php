@@ -1,5 +1,6 @@
 <?php
     $temp = "2";
-    $num = (string)((int)$temp -1);
-    echo $num;
+
 ?>
+
+<input type="submit" name="sb" value="<?php $temp?>" />

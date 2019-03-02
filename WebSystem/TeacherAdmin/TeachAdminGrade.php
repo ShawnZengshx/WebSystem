@@ -16,7 +16,7 @@
     </form>
 </fieldset>
 
-
+include("../Mysql/MysqlConnect.php");
 <?php
 /**
  * Created by PhpStorm.
@@ -25,8 +25,8 @@
  * Time: 15:01
  */
 
-include("../Mysql/MysqlConnect.php");
 if(isset($_POST['uploadGrade'])){
+
     $targetId = $_POST['targetId'];
     $grade = $_POST['grade'];
     $update_grade = "update stu set stugrade = '$grade' where stuid = '$targetId'";
