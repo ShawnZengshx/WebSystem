@@ -19,8 +19,21 @@
 </head>
 <?php require '../controllers/loginTest.php' ?>
 <body>
-
-<div class="container">
+<div class="container ">
+    <nav class="navbar navbar-inverse navbar-fixed-top " role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header ">
+                <a href="#" class="navbar-brand center-block ">Welcome</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav" id="mytab">
+                    <li ><a href="Welcom.html">Home</a></li>
+                    <li class="active"><a href="#">Stu</a></li>
+                    <li><a href="adminLogin.html">Admin</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <form class="form-signin" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <h2 class="form-signin-heading">Please sign in</h2>
@@ -38,6 +51,18 @@
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 
     </form>
+</div>
+
+<script>
+    $("#mytab a").click(function (e) {
+        $(this).tab("show");
+    })
+
+</script>
+
+
+<div class="container">
+
 
 </div> <!-- /container -->
 

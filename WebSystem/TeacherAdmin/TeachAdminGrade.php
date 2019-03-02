@@ -16,7 +16,7 @@
     </form>
 </fieldset>
 
-include("../Mysql/MysqlConnect.php");
+
 <?php
 /**
  * Created by PhpStorm.
@@ -24,6 +24,8 @@ include("../Mysql/MysqlConnect.php");
  * Date: 2019-02-28
  * Time: 15:01
  */
+
+include("../Mysql/MysqlConnect.php");
 
 if(isset($_POST['uploadGrade'])){
 

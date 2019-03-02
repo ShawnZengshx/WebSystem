@@ -9,9 +9,8 @@
 
 
 session_start();
-$teachId = htmlspecialchars($_POST['teachId']);
+$teachId = htmlspecialchars($_POST['teachname']);
 $teachpwd = $_POST['teachpwd'];
-include('teacherLogin.html');
 
 if($_GET['action']=='logout'){
     unset($_SESSION['teachId']);
