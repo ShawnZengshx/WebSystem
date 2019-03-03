@@ -21,7 +21,7 @@
     <script src="resource/bootstrap-table/js/bootstrap-table-zh-CN.js"></script>
 
     <!-- Custom styles for this template -->
-    <link href="../resource/dashboard.css" rel="stylesheet">
+    <link href="resource/dashboard.css" rel="stylesheet">
 
 </head>
 
@@ -193,7 +193,7 @@
 </div>
 <script>
     $("#table").bootstrapTable({ // 对应table标签的id
-        url: "../model/target.json",   //AJAX获取表格数据的url
+        url: "target.json",   //AJAX获取表格数据的url
         striped: true,                      //是否显示行间隔色(斑马线)
         pagination: true,                   //是否显示分页（*）
         sidePagination: "server",           //分页方式：client客户端分页，server服务端分页（*）

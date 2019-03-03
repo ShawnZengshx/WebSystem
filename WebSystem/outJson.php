@@ -11,7 +11,7 @@ include("Mysql/MysqlConnect.php");
 $sql = "select stuid  from stuexam";
 $id_info = $conn->query($sql)->fetch_assoc();
 $id = $id_info['stuid'];
-$full_sql = "select stuid,stuface,stuemail from stu where stuid = '$id'";
+$full_sql = "select stu.stuid,stuface,stugrade from stu,stuexam where stu.stuid = stuexam.stuid";
 $res = mysqli_query($conn,$full_sql);
 if(!$res){
     exit($conn->error);
