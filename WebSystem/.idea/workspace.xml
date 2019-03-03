@@ -2,29 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="760aacc0-fdc5-45fb-a60e-d82821408af1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/haha.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ic_android1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ic_android2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ic_android3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ic_p1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ic_p2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ic_p3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ic_p4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ic_p5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ic_p6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ic_p7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ic_p8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ic_p9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ic_personal.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ic_remeber.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ic_store.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource/bootstrap/css/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource/js/init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource/js/npm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource/js/util.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeacherAdmin/TeachAdminGrade.php" beforeDir="false" afterPath="$PROJECT_DIR$/TeacherAdmin/TeachAdminGrade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fron_test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/info.php" beforeDir="false" afterPath="$PROJECT_DIR$/info.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/js/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/resource/js/init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,47 +68,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resource/js/init.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resource/js/jquery.js">
-          <provider selected="true" editor-type-id="text-editor">
             <state>
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+              <caret column="26" selection-start-column="26" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resource/js/npm.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resource/js/util.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CSSDemo.html">
+        <entry file="file://$PROJECT_DIR$/TeacherAdmin/TeachAdminGrade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="47" column="10" selection-start-line="11" selection-end-line="47" selection-end-column="10" />
+            <state relative-caret-position="164">
+              <caret line="36" column="49" lean-forward="true" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TeacherAdmin/TeachAdminGrade.php">
+        <entry file="file://$PROJECT_DIR$/info.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="36" column="49" lean-forward="true" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
+            <state relative-caret-position="504">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -181,7 +141,6 @@
         <option value="$PROJECT_DIR$/controllers/loginTest.php" />
         <option value="$PROJECT_DIR$/controllers/stuLogout.php" />
         <option value="$PROJECT_DIR$/views/enrollment.php" />
-        <option value="$PROJECT_DIR$/info.php" />
         <option value="$PROJECT_DIR$/iii.html" />
         <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/iii.html" />
@@ -204,9 +163,10 @@
         <option value="$PROJECT_DIR$/outJson.php" />
         <option value="$PROJECT_DIR$/views/adminLogin.html" />
         <option value="$PROJECT_DIR$/fron_test.html" />
-        <option value="$PROJECT_DIR$/resource/js/init.js" />
         <option value="$PROJECT_DIR$/haha.html" />
         <option value="$PROJECT_DIR$/TeacherAdmin/TeachAdminGrade.php" />
+        <option value="$PROJECT_DIR$/resource/js/init.js" />
+        <option value="$PROJECT_DIR$/info.php" />
       </list>
     </option>
   </component>
@@ -228,30 +188,6 @@
             <path>
               <item name="System" type="b2602c69:ProjectViewProjectNode" />
               <item name="WebSystem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="System" type="b2602c69:ProjectViewProjectNode" />
@@ -335,16 +271,15 @@
       <workItem from="1551255300802" duration="37620000" />
       <workItem from="1551338391560" duration="12071000" />
       <workItem from="1551358070039" duration="1083000" />
-      <workItem from="1551399312746" duration="61057000" />
+      <workItem from="1551399312746" duration="61645000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111831000" />
+    <option name="totallyTimeSpent" value="112419000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24678111" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -620,20 +555,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/info.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSSDemo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="47" column="10" selection-start-line="11" selection-end-line="47" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fron_test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
@@ -658,35 +579,42 @@
     <entry file="file://$PROJECT_DIR$/img/1.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/resource/js/npm.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/bootstrap/css/index.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/haha.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TeacherAdmin/TeachAdminGrade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="36" column="49" lean-forward="true" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSSDemo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="47" column="10" selection-start-line="11" selection-end-line="47" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/js/util.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/resource/js/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/js/npm.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/js/util.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/bootstrap/css/index.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/js/init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/haha.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
         </state>
       </provider>
     </entry>
@@ -697,10 +625,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TeacherAdmin/TeachAdminGrade.php">
+    <entry file="file://$PROJECT_DIR$/resource/js/init.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="36" column="49" lean-forward="true" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/info.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
