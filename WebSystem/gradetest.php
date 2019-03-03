@@ -12,27 +12,20 @@
 
     <title>Info</title>
 
-    <link href="../resource/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../resource/bootstrap-table/css/bootstrap-table.min.css" rel="stylesheet">
+    <link href="resource/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resource/bootstrap-table/css/bootstrap-table.min.css" rel="stylesheet">
 
-    <script src="../resource/js/jquery.min.js"></script>
-    <script src="../resource/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../resource/bootstrap-table/js/bootstrap-table.js"></script>
-    <script src="../resource/bootstrap-table/js/bootstrap-table-zh-CN.js"></script>
+    <script src="resource/js/jquery.min.js"></script>
+    <script src="resource/bootstrap/js/bootstrap.min.js"></script>
+    <script src="resource/bootstrap-table/js/bootstrap-table.js"></script>
+    <script src="resource/bootstrap-table/js/bootstrap-table-zh-CN.js"></script>
 
     <!-- Custom styles for this template -->
-    <link href="../resource/dashboard.css" rel="stylesheet">
+    <link href="resource/dashboard.css" rel="stylesheet">
 
 </head>
 
 <body>
-<script>
-    /*$("#addBook a").click(function (e) {
-        $(this).tab("show");
-    })*/
-
-
-</script>
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
@@ -64,98 +57,6 @@
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <h2 class="sub-header">考生成绩</h2>
-            <div class="btn-group operation">
-                <button id="btn_add" type="button" class="btn bg-primary add" data-toggle="modal" data-target="#addStu">
-                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增
-                </button>
-                <button id="btn_edit" type="button" class="btn bg-info update" data-target="#updateStuInfo" data-toggle="modal">
-                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>修改
-                </button>
-                <button id="btn_delete" type="button" class="btn btn-success del" data-toggle="modal" data-target="#deleteStu">
-                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>删除
-                </button>
-            </div>
-            <!--新增成绩的modal-->
-            <div class="modal fade" id="addStu" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">新增成绩</h4>
-                        </div>
-                        <div id="addBookModal" class="modal-body">
-                            <div class="form-horizontal">
-                                <div class="form-group">
-                                    <label for="addStuId" class="col-sm-2 control-label">学生ID:*</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" id="addStuId" type="text" name="stuId">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="addStuName" class="col-sm-2 control-label">学生姓名:*</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" id="addStuName" type="text" name="stuName"/>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="addStuGrade" class="col-sm-2 control-label">学生成绩:*</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" id="addStuGrade" type="text" name="stuGrade" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <div class="center-block">
-                                <button id="cancelAdd" type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                <button id="addBooksInfo" type="button" class="btn btn-primary que-update" data-dismiss="modal" onclick="add_info()">保存</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--修改成绩的modal-->
-            <div class="modal fade" id="updateStuInfo" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">修改学生成绩图</h4>
-                        </div>
-                        <div id="editBookModal" class="modal-body">
-                            <div class="form-horizontal">
-                                <div class="form-group">
-                                    <label for="updateStuGrade" class="col-sm-2 control-label">学生成绩:*</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" id="updateStuGrade" type="text">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <div class="center-block">
-                                <button id="cancelEdit" type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                <button id="saveEdit" type="button" class="btn btn-success update_ok" data-dismiss="modal" onclick="update_info()">保存</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--删除成绩的modal-->
-            <div class="modal fade" id="deleteStu" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">确认要删除吗？</h4>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                            <button id="delete" type="button" class="btn btn-danger" data-dismiss="modal" onclick="del_info()">删除</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <!--
             <div class="table-responsive">
@@ -291,7 +192,6 @@
     </div>
 </div>
 <script>
-
     $("#table").bootstrapTable({ // 对应table标签的id
         url: "target.json",   //AJAX获取表格数据的url
         striped: true,                      //是否显示行间隔色(斑马线)
@@ -316,10 +216,9 @@
         showColumns: true,                  //是否显示所有的列
         showRefresh: true,                  //是否显示刷新按钮
         minimumCountColumns: 2,             //最少允许的列数
-        clickToSelect: true,               //是否启用点击选中行
+        clickToSelect: false,               //是否启用点击选中行
         //height: 500,                      //行高，如果没有设置height属性，表格自动根据记录条数觉得表格高度
         //uniqueId: "id",                   //每一行的唯一标识，一般为主键列
-        singleSelect:true,
         showToggle:true,                    //是否显示详细视图和列表视图的切换按钮
         cardView: false,                    //是否显示详细视图
         detailView: false,                  //是否显示父子表
@@ -327,21 +226,10 @@
         sortable: true,                     //是否启用排序
         sortOrder: "asc",                   //排序方式
         sortName: 'sn', // 要排序的字段
-        checkboxHeader:true,
-        uniqueId:"stuid",
         columns: [
             {
                 checkbox:true
-            },{
-                field: 'order',
-                title: '序号',
-                align: 'center',
-                valign:'middle',
-                formatter: function (value, row, index) {
-                    return index+1;
-                }
-
-            },{
+            }, {
                 field: 'stuid', // 返回json数据中的name
                 title: '学生ID', // 表格表头显示文字
                 align: 'center', // 左右居中
@@ -366,7 +254,6 @@
             console.info("加载数据失败");
         },
 
-
         //>>>>>>>>>>>>>>导出excel表格设置
         //showExport: phoneOrPc(),              //是否显示导出按钮(此方法是自己写的目的是判断终端是电脑还是手机,电脑则返回true,手机返回falsee,手机不显示按钮)
         exportDataType: "basic",              //basic', 'all', 'selected'.
@@ -381,34 +268,8 @@
             //onMsoNumberFormat: DoOnMsoNumberFormat
         }
         //导出excel表格设置<<<<<<<<<<<<<<<<
+
     });
-    function update_info() {
-
-        var a= $("#table").bootstrapTable('getSelections');
-        var ids = a[0].stuid
-        var grade = $("#updateStuGrade").val();
-        var _data={
-            "stugrade":grade
-        };
-        $("#table").bootstrapTable('updateByUniqueId',{id:ids, row:_data})
-    }
-    function add_info(){
-        var id = $("#addStuId").val();
-        var name = $("#addStuName").val();
-        var grade = $("#addStuGrade").val();
-        var _data={
-            "stuid" :id,
-            "stuface": name,
-            "stugrade":grade
-        };
-        $("#table").bootstrapTable('append',_data)
-    }
-    function del_info(){
-        var del_stu = $("#table").bootstrapTable('getSelections');
-        var id = del_stu[0].stuid;
-        $("#table").bootstrapTable('remove',{field:'stuid', values:id})
-    }
-
 </script>
 </body>
 </html>
@@ -416,7 +277,7 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Shawn Zeng
+ * User: 张皖渝
  * Date: 3/2/2019
  * Time: 7:17 PM
  */

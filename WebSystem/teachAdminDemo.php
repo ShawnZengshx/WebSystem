@@ -382,34 +382,36 @@
          }
          //导出excel表格设置<<<<<<<<<<<<<<<<
      });
-function update_info() {
 
-    var a= $("#table").bootstrapTable('getSelections');
-    var ids = a[0].stuid
-    var grade = $("#updateStuGrade").val();
-    var _data={
-        "stugrade":grade
+     function update_info() {
+         var a= $("#table").bootstrapTable('getSelections');
+         var ids = a[0].stuid;
+         var grade = $("#updateStuGrade").val();
+         var _data={
+             "stugrade":grade
+         };
+         $("#table").bootstrapTable('updateByUniqueId',{id:ids, row:_data})
+     }
+</script>
+<script>
+
+
+    function add_info(){
+        var id = $("#addStuId").val();
+        var name = $("#addStuName").val();
+        var grade = $("#addStuGrade").val();
+        var _data={
+            "stuid" :id,
+            "stuface": name,
+            "stugrade":grade
+        };
+        $("#table").bootstrapTable('append',_data)
     };
-    $("#table").bootstrapTable('updateByUniqueId',{id:ids, row:_data})
-
-}
-function add_info(){
-    var id = $("#addStuId").val();
-    var name = $("#addStuName").val();
-    var grade = $("#addStuGrade").val();
-    var _data={
-        "stuid" :id,
-        "stuface": name,
-        "stugrade":grade
-    };
-    $("#table").bootstrapTable('append',_data)
-}
-function del_info(){
-    var del_stu = $("#table").bootstrapTable('getSelections');
-    var id = del_stu[0].stuid;
-    $("#table").bootstrapTable('remove',{field:'stuid', values:id})
-}
-
+    function del_info(){
+        var del_stu = $("#table").bootstrapTable('getSelections');
+        var id = del_stu[0].stuid;
+        $("#table").bootstrapTable('remove',{field:'stuid', values:id})
+    }
 </script>
 </body>
 </html>
@@ -421,3 +423,4 @@ function del_info(){
  * Date: 3/2/2019
  * Time: 7:17 PM
  */
+
