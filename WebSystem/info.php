@@ -228,6 +228,8 @@
         sortName: 'sn', // 要排序的字段
         columns: [
             {
+                checkbox:true
+            }, {
                 field: 'stuid', // 返回json数据中的name
                 title: '学生ID', // 表格表头显示文字
                 align: 'center', // 左右居中

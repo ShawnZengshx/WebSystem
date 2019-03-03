@@ -27,9 +27,10 @@
 
 <body>
 <script>
-    $("#addBook a").click(function (e) {
+    /*$("#addBook a").click(function (e) {
         $(this).tab("show");
-    })
+    })*/
+
 
 </script>
 
@@ -64,19 +65,19 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <h2 class="sub-header">考生成绩</h2>
             <div class="btn-group operation">
-                <button id="btn_add" type="button" class="btn bg-primary" data-toggle="modal" data-target="#addBook">
+                <button id="btn_add" type="button" class="btn bg-primary add" data-toggle="modal" data-target="#addStu">
                     <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增
                 </button>
-                <button id="btn_edit" type="button" class="btn bg-info" data-target="#editBookInfo" data-toggle="modal">
+                <button id="btn_edit" type="button" class="btn bg-info update" data-target="#updateStuInfo" data-toggle="modal">
                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>修改
                 </button>
-                <button id="btn_delete" type="button" class="btn btn-success" data-toggle="modak" data-target="#deleteBook">
+                <button id="btn_delete" type="button" class="btn btn-success del" data-toggle="modal" data-target="#deleteStu">
                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>删除
                 </button>
             </div>
           <!--新增成绩的modal-->
-            <div class="modal fade" id="addBook" tabindex="-1" role="dialog">
-                <div class="modal-dialog">
+            <div class="modal fade" id="addStu" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -85,21 +86,21 @@
                         <div id="addBookModal" class="modal-body">
                             <div class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="bookName" class="col-sm-2 control-label">学生ID:*</label>
+                                    <label for="addStuId" class="col-sm-2 control-label">学生ID:*</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" id="bookName" type="text">
+                                        <input class="form-control" id="addStuId" type="text" name="stuId">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="bookAuthor" class="col-sm-2 control-label">学生姓名:*</label>
+                                    <label for="addStuName" class="col-sm-2 control-label">学生姓名:*</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" id="bookAuthor" type="text">
+                                        <input class="form-control" id="addStuName" type="text" name="stuName"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="bookPrice" class="col-sm-2 control-label">学生成绩:*</label>
+                                    <label for="addStuGrade" class="col-sm-2 control-label">学生成绩:*</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" id="bookPrice" type="text">
+                                        <input class="form-control" id="addStuGrade" type="text" name="stuGrade" />
                                     </div>
                                 </div>
                             </div>
@@ -107,15 +108,15 @@
                         <div class="modal-footer">
                             <div class="center-block">
                                 <button id="cancelAdd" type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                <button id="addBooksInfo" type="button" class="btn btn-success" data-dismiss="modal">保存</button>
+                                <button id="addBooksInfo" type="button" class="btn btn-primary que-update" data-dismiss="modal" onclick="add_info()">保存</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!--修改成绩的modal-->
-            <div class="modal fade" id="editBookInfo" role="dialog">
-                <div class="modal-dialog">
+            <div class="modal fade" id="updateStuInfo" role="dialog">
+                <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -124,21 +125,9 @@
                         <div id="editBookModal" class="modal-body">
                             <div class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="editBookName" class="col-sm-2 control-label">学生ID:*</label>
+                                    <label for="updateStuGrade" class="col-sm-2 control-label">学生成绩:*</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" id="editBookName" type="text">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="editBookAuthor" class="col-sm-2 control-label">学生姓名:*</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" id="editBookAuthor" type="text">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="editBookPrice" class="col-sm-2 control-label">学生成绩:*</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" id="editBookPrice" type="text">
+                                        <input class="form-control" id="updateStuGrade" type="text">
                                     </div>
                                 </div>
                             </div>
@@ -146,15 +135,15 @@
                         <div class="modal-footer">
                             <div class="center-block">
                                 <button id="cancelEdit" type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                <button id="saveEdit" type="button" class="btn btn-success" data-dismiss="modal">保存</button>
+                                <button id="saveEdit" type="button" class="btn btn-success update_ok" data-dismiss="modal" onclick="update_info()">保存</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
            <!--删除成绩的modal-->
-            <div class="modal fade" id="deleteBook" role="dialog">
-                <div class="modal-dialog">
+            <div class="modal fade" id="deleteStu" role="dialog">
+                <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -162,7 +151,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                            <button id="delete" type="button" class="btn btn-danger" data-dismiss="modal">删除</button>
+                            <button id="delete" type="button" class="btn btn-danger" data-dismiss="modal" onclick="del_info()">删除</button>
                         </div>
                     </div>
                 </div>
@@ -327,9 +316,10 @@
          showColumns: true,                  //是否显示所有的列
          showRefresh: true,                  //是否显示刷新按钮
          minimumCountColumns: 2,             //最少允许的列数
-         clickToSelect: false,               //是否启用点击选中行
+         clickToSelect: true,               //是否启用点击选中行
          //height: 500,                      //行高，如果没有设置height属性，表格自动根据记录条数觉得表格高度
          //uniqueId: "id",                   //每一行的唯一标识，一般为主键列
+         singleSelect:true,
          showToggle:true,                    //是否显示详细视图和列表视图的切换按钮
          cardView: false,                    //是否显示详细视图
          detailView: false,                  //是否显示父子表
@@ -337,8 +327,21 @@
          sortable: true,                     //是否启用排序
          sortOrder: "asc",                   //排序方式
          sortName: 'sn', // 要排序的字段
+         checkboxHeader:true,
+         uniqueId:"stuid",
          columns: [
              {
+                checkbox:true
+             },{
+                 field: 'order',
+                 title: '序号',
+                 align: 'center',
+                 valign:'middle',
+                 formatter: function (value, row, index) {
+                     return index+1;
+                 }
+
+             },{
                  field: 'stuid', // 返回json数据中的name
                  title: '学生ID', // 表格表头显示文字
                  align: 'center', // 左右居中
@@ -377,12 +380,35 @@
              excelstyles: ['background-color', 'color', 'font-size', 'font-weight'],
              //onMsoNumberFormat: DoOnMsoNumberFormat
          }
-
-
          //导出excel表格设置<<<<<<<<<<<<<<<<
      });
+function update_info() {
 
+    var a= $("#table").bootstrapTable('getSelections');
+    var ids = a[0].stuid
+    var grade = $("#updateStuGrade").val();
+    var _data={
+        "stugrade":grade
+    };
+    $("#table").bootstrapTable('updateByUniqueId',{id:ids, row:_data})
 
+}
+function add_info(){
+    var id = $("#addStuId").val();
+    var name = $("#addStuName").val();
+    var grade = $("#addStuGrade").val();
+    var _data={
+        "stuid" :id,
+        "stuface": name,
+        "stugrade":grade
+    };
+    $("#table").bootstrapTable('append',_data)
+}
+function del_info(){
+    var del_stu = $("#table").bootstrapTable('getSelections');
+    var id = del_stu[0].stuid;
+    $("#table").bootstrapTable('remove',{field:'stuid', values:id})
+}
 
 </script>
 </body>
