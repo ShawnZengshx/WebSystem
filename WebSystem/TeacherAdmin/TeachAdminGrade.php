@@ -31,7 +31,7 @@ if(isset($_POST['uploadGrade'])){
 
     $targetId = $_POST['targetId'];
     $grade = $_POST['grade'];
-    $update_grade = "update stu set stugrade = '$grade' where stuid = '$targetId'";
+    $update_grade = "update stuexam set stugrade = '$grade' where stuid = '$targetId'";
     $res = mysqli_query($conn, $update_grade);
     if(mysqli_affected_rows($conn)!=0){
         echo '<script>alert("成绩录入成功！")</script>';

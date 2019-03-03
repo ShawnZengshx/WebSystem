@@ -2,13 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="760aacc0-fdc5-45fb-a60e-d82821408af1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/haha.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/ic_android1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/ic_android2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/ic_android3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/ic_p1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/ic_p2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/ic_p3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/ic_p4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/ic_p5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/ic_p6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/ic_p7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/ic_p8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/ic_p9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/ic_personal.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/ic_remeber.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/ic_store.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/bootstrap/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/js/init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/js/npm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/js/util.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fron_test.html" beforeDir="false" afterPath="$PROJECT_DIR$/fron_test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/adminLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/adminLogin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeacherAdmin/TeachAdminGrade.php" beforeDir="false" afterPath="$PROJECT_DIR$/TeacherAdmin/TeachAdminGrade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fron_test.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,20 +57,77 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/fron_test.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bootstrap_test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="53" column="18" lean-forward="true" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+            <state relative-caret-position="298">
+              <caret line="15" column="16" selection-end-line="57" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/info.php">
+        <entry file="file://$PROJECT_DIR$/haha.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="210">
+              <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/target.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="26" selection-start-column="26" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resource/js/init.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resource/js/jquery.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resource/js/npm.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resource/js/util.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CSSDemo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="518">
+              <caret line="47" column="10" selection-start-line="11" selection-end-line="47" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TeacherAdmin/TeachAdminGrade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="166">
+              <caret line="36" column="49" lean-forward="true" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -83,8 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Mysql/TeachSqlConnect.php" />
-        <option value="$PROJECT_DIR$/Login/mail.php" />
         <option value="$PROJECT_DIR$/Login/login.php" />
         <option value="$PROJECT_DIR$/Reg/test.php" />
         <option value="$PROJECT_DIR$/Reg/reg.php" />
@@ -118,7 +189,6 @@
         <option value="$PROJECT_DIR$/Stu/enrollment.php" />
         <option value="$PROJECT_DIR$/Login/teacherLogin.html" />
         <option value="$PROJECT_DIR$/Login/teacherLogin.php" />
-        <option value="$PROJECT_DIR$/TeacherAdmin/TeachAdminGrade.php" />
         <option value="$PROJECT_DIR$/Login/teacherLogin.php" />
         <option value="$PROJECT_DIR$/welcome.html" />
         <option value="$PROJECT_DIR$/CSSDemo.html" />
@@ -134,6 +204,9 @@
         <option value="$PROJECT_DIR$/outJson.php" />
         <option value="$PROJECT_DIR$/views/adminLogin.html" />
         <option value="$PROJECT_DIR$/fron_test.html" />
+        <option value="$PROJECT_DIR$/resource/js/init.js" />
+        <option value="$PROJECT_DIR$/haha.html" />
+        <option value="$PROJECT_DIR$/TeacherAdmin/TeachAdminGrade.php" />
       </list>
     </option>
   </component>
@@ -156,6 +229,35 @@
               <item name="System" type="b2602c69:ProjectViewProjectNode" />
               <item name="WebSystem" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="TeacherAdmin" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -170,6 +272,11 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resource/bootstrap/css" />
+      <recent name="$PROJECT_DIR$/img" />
+      <recent name="$PROJECT_DIR$/resource/js" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/img" />
       <recent name="$PROJECT_DIR$/Reg" />
@@ -189,11 +296,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.fron_test.html">
+  <component name="RunManager" selected="JavaScript Debug.haha.html">
     <configuration name="EmailValidate.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/System/Reg/EmailValidate.php" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="Welcom.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/System/views/Welcom.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="Welcom.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/System/views/Welcom.php" useBuiltInWebServerPort="true">
@@ -202,16 +306,19 @@
     <configuration name="fron_test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/System/fron_test.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="haha.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/System/haha.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="outJson.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/outJson.php">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.haha.html" />
         <item itemvalue="JavaScript Debug.fron_test.html" />
         <item itemvalue="JavaScript Debug.Welcom.php" />
         <item itemvalue="PHP Script.outJson.php" />
         <item itemvalue="JavaScript Debug.EmailValidate.php" />
-        <item itemvalue="JavaScript Debug.Welcom.html" />
       </list>
     </recent_temporary>
   </component>
@@ -228,12 +335,12 @@
       <workItem from="1551255300802" duration="37620000" />
       <workItem from="1551338391560" duration="12071000" />
       <workItem from="1551358070039" duration="1083000" />
-      <workItem from="1551399312746" duration="59551000" />
+      <workItem from="1551399312746" duration="61057000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110325000" />
+    <option name="totallyTimeSpent" value="111831000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -265,46 +372,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Login/ResetCode.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StuGetGrade/StuQueryGrade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Stu/StuQueExam.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/mysqli/mysqli.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52426">
-          <caret line="2386" column="19" lean-forward="true" selection-start-line="2386" selection-start-column="19" selection-end-line="2386" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/bootstrap/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-412" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Stu/showPicture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/iii.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -365,13 +432,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TeacherAdmin/TeachAdminGrade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-164">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/enrollment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-54">
@@ -418,13 +478,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap_test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="15" column="16" selection-end-line="57" />
         </state>
       </provider>
     </entry>
@@ -531,13 +584,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/img/2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/1.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/img/3.jpg">
@@ -557,24 +604,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/Welcom.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1651">
-          <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/adminLogin.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-670">
           <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSSDemo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="47" column="10" lean-forward="true" selection-start-line="11" selection-end-line="47" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -590,14 +623,84 @@
     <entry file="file://$PROJECT_DIR$/info.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSSDemo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="47" column="10" selection-start-line="11" selection-end-line="47" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fron_test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="53" column="18" lean-forward="true" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+        <state relative-caret-position="259">
+          <caret line="49" column="14" lean-forward="true" selection-end-line="83" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/Welcom.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1651">
+          <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="15" column="16" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/js/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/js/npm.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/js/util.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/bootstrap/css/index.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/js/init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/haha.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TeacherAdmin/TeachAdminGrade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="36" column="49" lean-forward="true" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
         </state>
       </provider>
     </entry>
