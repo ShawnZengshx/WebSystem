@@ -20,11 +20,14 @@
         $("#mytab a").click(function (e) {
             $(this).tab("show");
         })
-
     </script>
 
 </head>
 
+
+<?php
+    require '../controllers/registerTest.php';
+?>
 <body>
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -42,12 +45,17 @@
             <ul class="nav navbar-nav" id="mytab">
                 <li class="active"><a href="#" >Home</a></li>
                 <li><a href="login.php">Student</a></li>
-                <li ><a href="#">Admin</a></li>
+                <li ><a href="adminLogin.html">Admin</a></li>
             </ul>
         </div>
 
     </div>
 </nav>
+<style>
+    .error{
+        color:#ff0000;
+    }
+</style>
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
@@ -56,7 +64,47 @@
 
         <p>When people can demonstrate their potential, the possibilities are endless.
             <br>Meaningful measurement today can help you set your best path forward tomorrow. Our assessments and research tools are designed to help you make decisions with confidence.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Register now &raquo;</a></p>
+        <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Register now &raquo;</a></p>-->
+        <p><button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal" style="background:#9acfea ">
+            Register now&raquo;
+        </button></p>
+
+        <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Register for ETS</h4>
+                    </div>
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <span class="error">* 必填字段</span><br/>
+                                <label for="stuname" class="control-label">User name</label>
+                                <input class="form-control" type="text" id="stuname" name="stuname"/><span class="error">*</span>
+                                <label for="password" class="control-label">Password</label>
+                                <input class="form-control" type="password" id="password" name="password" />
+                                <label for="confirmpwd" class="control-label">Confirm password</label>
+                                <input class="form-control" type="password" id="confirmpwd" name="confirmpwd" /><span class="error">*</span>
+                                <label for="stuemail" class="control-label">Email</label>
+                                <input class="form-control" type="text" id="stuemail" name="email"/><span class="error">*</span>
+                                <label for="stuidenid" class="control-label">Identical ID</label>
+                                <input class="form-control" type="text" id="stuidenid" name="stuidenid" />
+                                <label for="stuface" class="control-label">Real Name</label>
+                                <input class="form-control" type="text" id="stuface" name="stuface"/>
+                            </div>
+                        </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <input type="submit" class="btn btn-primary" value="OK">
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 
@@ -83,7 +131,7 @@
     <hr>
 
     <footer>
-        <p>&copy; 2016 Company, Inc.</p>
+        <p>&copy; 2019 Company, Inc.</p>
     </footer>
 </div> <!-- /container -->
 

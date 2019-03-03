@@ -8,68 +8,75 @@ include("../Mysql/MysqlConnect.php");
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
     $password = test_input($_POST["password"]);
-    $phone = test_input($_POST["phone"]);
     $email = test_input($_POST["email"]);
+    $stuname = test_input($_POST['stuname']);
+    $idenid = test_input($_POST['stuidenid']);
+    $stuface = test_input($_POST['stuface']);
     $emailpattern = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/";
 
-    if(empty($_POST["phone"])){
-        $phoneErr = "电话是必需的";
+    /*if(empty($_POST["phone"])){
+        $phoneErr = "电话是必需的\\n";
         $success = false;
-    }
+    }*/
     if(empty($_POST['email'])){
-        $emailErr = "邮箱是必需的";
+        $emailErr = "邮箱是必需的\\n";
         $success = false;
     }
     if(empty($_POST["password"])){
-        $passwordErr = "密码是必需的";
+        $passwordErr = "密码是必需的\\n";
         $success = false;
     }
-    if(!preg_match("/^1[34578]\d{9}/", $phone)){
-        $phoneErr = "手机格式不对，请重新输入";
+    /*if(!preg_match("/^1[34578]\d{9}/", $phone)){
+        $phoneErr = "手机格式不对，请重新输入\\n";
         $success = false;
-    }
+    }*/
     if(!preg_match($emailpattern, $email)){
-        $emailErr = "邮件格式不对，请重新输入";
+        $emailErr = "邮件格式不对，请重新输入\\n";
         $success = false;
     }
     if(strlen($_POST["password"])<8){
-        $passwordErr = "请增加密码长度";
+        $passwordErr = "请增加密码长度\\n";
         $success = false;
     }
     if(!preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,}$/",$password)){
-        $passwordErr = "请包含大小写字母，数字和特殊符号四类字符";
+        $passwordErr = "请包含大小写字母，数字和特殊符号四类字符\\n";
         $success = false;
     }
     if($success){
-        //$_SESSION['stuname'] = $stuname;
+        $_SESSION['stuname'] = $stuname;
         $_SESSION['password'] = $password;
         $_SESSION['email'] = $email;
-        //$_SESSION['idenid'] = $idenid;
-        //$_SESSION['stuface'] = $stuface;
+        $_SESSION['idenid'] = $idenid;
+        $_SESSION['stuface'] = $stuface;
 
         //查询用户名是否已经存在
-        /*$sql_query = mysqli_query($conn, "select * from stu where stuname='$stuname' limit 1");
+        $sql_query = mysqli_query($conn, "select * from stu where stuname='$stuname' limit 1");
         if(mysqli_fetch_array($sql_query)){
-            echo'错误：用户名',$stuname,'已存在.<a href ="javascript:history.back(-1);">返回</a>';
+            $errorin = '错误：用户名'.$stuname.'已存在';
+            echo '<script>alert("'.$errorin.'");history.go(-1)</script>';
             exit;
-        }*/
+        }
 
         $mail_query = mysqli_query($conn,"select * from stu where stuemail = '$email' limit 1");
         if(mysqli_fetch_array($mail_query)){
-            echo'错误：邮箱',$email,'已存在.<a href ="javascript:history.back(-1);">返回</a>';
+            $errinfo = "邮箱：".$email."已经存在！";
+            echo '<script>alert("'.$errinfo.'");history.go(-1)</script>';
             exit;
         }
 
         $conn->close();  //关闭数据连接
 
         sendemail($email);
-
-        echo "2秒后将自动跳转到验证界面".'<meta http-equiv="Refresh" content="2;URL=../Reg/validate.html" />';
+        echo '<script>alert("提交成功！验证码已发到邮箱！1秒后将自动跳转到验证界面");window.setTimeout(window.location.href="../Reg/EmailValidate.php",1000)</script>';
+        //echo "2秒后将自动跳转到验证界面".'<meta http-equiv="Refresh" content="2;URL=../Reg/validate.html" />';
         exit;
 
 
 
         //header("location:../views/register.html");
+    }else{
+        $error = $phoneErr.$emailErr.$passwordErr;
+        echo "<script>alert('".$error."');history.go(-1)</script>";
     }
 }
 
@@ -94,7 +101,6 @@ function sendemail($email){
     //$message = "9kiwq1";
     $_SESSION['valCode'] = $message;    //保存密钥
     mail($to,$subject,$message);
-    echo "验证码已发送至邮箱，请注意查收！".'<br/>';
 }
 
 function resendEmail($email){

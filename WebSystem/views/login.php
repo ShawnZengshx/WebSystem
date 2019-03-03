@@ -27,7 +27,7 @@
             </div>
             <div class="collapse navbar-collapse navbar-right">
                 <ul class="nav navbar-nav" id="mytab">
-                    <li ><a href="Welcom.html">Home</a></li>
+                    <li ><a href="Welcom.php">Home</a></li>
                     <li class="active"><a href="#">Student</a></li>
                     <li><a href="adminLogin.html">Admin</a></li>
                 </ul>

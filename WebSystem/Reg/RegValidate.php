@@ -10,7 +10,7 @@
 include('../Mysql/MysqlConnect.php');
 session_start();
 $stuname = $_POST['stuname'];       //用户名
-$password = $_POST['stupassword'];  //密码
+$password = $_POST['password'];  //密码
 $email = $_POST['email'];       //电子邮箱
 //$id = $_POST['stuid'];
 $idenid = $_POST['stuidenid'];  //身份证
@@ -41,13 +41,15 @@ if(mysqli_fetch_array($stuidenid)){
 
 $mail_query = mysqli_query($conn,"select * from stu where stuemail = '$email' limit 1");
 if(mysqli_fetch_array($mail_query)){
-    echo'错误：邮箱',$email,'已存在.<a href ="javascript:history.back(-1);">返回</a>';
+    $errinfo = "邮箱：".$email."已经存在！";
+    echo '<script>alert("'.$errinfo.'");history.go(-1)</script>';
+    //echo '<script>alert("错误！")</script>';
     exit;
 }
 $conn->close();  //关闭数据连接
 function sendemail($email){
     $to = $email;
-    $subject = "验证码";
+    $subject = "Verify code";
     $message = "";
     $code="123456780abcedfghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     $length = strlen($code);
