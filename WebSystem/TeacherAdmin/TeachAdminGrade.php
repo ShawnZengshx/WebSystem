@@ -1,4 +1,11 @@
-
+<!--
+/**
+ * Created by PhpStorm.
+ * User: Shawn Zeng
+ * Date: 3/2/2019
+ * Time: 7:17 PM
+ */
+-->
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -59,7 +66,7 @@
             <ul class="nav nav-sidebar">
                 <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
                 <li><a href="#">Reports</a></li>
-                <li><a href="#">Export</a></li>
+                <li><a href="outForExcel.php">Export</a></li>
             </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -252,12 +259,7 @@
 </html>
 
 <?php
-/**
- * Created by PhpStorm.
- * User: Shawn Zeng
- * Date: 3/2/2019
- * Time: 7:17 PM
- */
+
 include("../Mysql/MysqlConnect.php");
 if(isset($_GET['type'])){
     $info = $_GET['type'];

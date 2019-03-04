@@ -52,8 +52,9 @@
             <ul class="nav nav-sidebar">
                 <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
                 <li><a href="EnrollForExam.php">Register for exam</a></li>
+                <li><a href="../test/PDFtest.php">生成报名表</a></li>
                 <li><a href="#">Reports</a></li>
-                <li><a href="#">Export</a></li>
+                <li><a href="outPutExcel.php">Export Grade</a></li>
             </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">

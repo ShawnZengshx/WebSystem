@@ -5,6 +5,7 @@
  * Date: 2019-02-28
  * Time: 13:15
  */
+
 include("../Mysql/MysqlConnect.php");
 $stuid = "zhangwanyu";
 $select = "select picture from stu where stuname = '$stuid'";
