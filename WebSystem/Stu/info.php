@@ -58,6 +58,45 @@
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <h2 class="sub-header">考生成绩</h2>
+            <form action="info.php" method="post">
+                <a href="javascript:;" class="file">选择照片
+                    <input type="file" name="uploadPic" id="uploadPic" />
+                </a>
+                <input type="submit" id="upload" name="upload"/>
+            </form>
+            <?php
+                if(isset($_POST['upload'])){
+                    echo '<script>alert("success")</script>';
+                }
+            ?>
+            <style>
+                .file {
+                    position: relative;
+                    display: inline-block;
+                    background: #D0EEFF;
+                    border: 1px solid #99D3F5;
+                    border-radius: 4px;
+                    padding: 4px 12px;
+                    overflow: hidden;
+                    color: #1E88C7;
+                    text-decoration: none;
+                    text-indent: 0;
+                    line-height: 20px;
+                }
+                .file input {
+                    position: absolute;
+                    font-size: 100px;
+                    right: 0;
+                    top: 0;
+                    opacity: 0;
+                }
+                .file:hover {
+                    background: #AADFFD;
+                    border-color: #78C3F3;
+                    color: #004974;
+                    text-decoration: none;
+                }
+            </style>
 
             <table id="table"></table>
         </div>

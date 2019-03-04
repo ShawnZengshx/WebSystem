@@ -11,7 +11,7 @@ session_start();
 $stuName = $_SESSION['stuname'];    //获取保存的用户名已经id号
 $stuId = $_SESSION['stuid'];
 if(isset($_POST['submit'])){
-    $form_data = $_FILES['picture']['tmp_name'];
+    $form_data = $_FILES['uploadPic']['tmp_name'];
     //$form_data = mysqli_real_escape_string($conn,file_get_contents($_FILES['picture']['temp_name']));
 
     $data = addslashes(fread(fopen($form_data,"r"), filesize($form_data)));
