@@ -255,7 +255,7 @@
     function update_info() {
 
         var a= $("#table").bootstrapTable('getSelections');
-        var ids = a[0].stuid
+        var ids = a[0].stuid;
         var grade = $("#updateStuGrade").val();
         var _data={
             "stugrade":grade
