@@ -129,6 +129,7 @@ outJson();
                     <span class="glyphicon glyphicon-book" aria-hidden="true"></span>报名
                 </button>
             </div>
+
             <!--报名考试的modal-->
             <div class="modal fade" id="enrollExam" role="dialog">
                 <div class="modal-dialog" role="document">

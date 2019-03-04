@@ -58,15 +58,37 @@
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <h2 class="sub-header">考生成绩</h2>
-            <form action="info.php" method="post">
-                <a href="javascript:;" class="file">选择照片
+            <form action="info.php" method="post" enctype="multipart/form-data">
+                在此上传照片：<a href="javascript:;" class="file">选择照片
+                    <input type="hidden" name="MAX_FILE_SIZE" value="10000000000"> <br>
                     <input type="file" name="uploadPic" id="uploadPic" />
                 </a>
-                <input type="submit" id="upload" name="upload"/>
+                <input type="submit" class="btn-primary" id="upload" name="upload"/>
             </form>
             <?php
                 if(isset($_POST['upload'])){
-                    echo '<script>alert("success")</script>';
+                    include("../Mysql/MysqlConnect.php");
+                    session_start();
+                    $stuName = $_SESSION['stuname'];    //获取保存的用户名已经id号
+                    $stuId = $_SESSION['stuid'];
+                    $form_data = $_FILES['uploadPic']['tmp_name'];
+                    if($form_data==null){
+                        echo '<script>alert("请选择一张照片！");history.go(-1)</script>';
+                        exit;
+                    }
+                    //$form_data = mysqli_real_escape_string($conn,file_get_contents($_FILES['picture']['temp_name']));
+                    $data = addslashes(fread(fopen($form_data,"r"), filesize($form_data)));
+                    $insert_query = "update stu set picture ='$data' where stuid = '$stuId' ";
+                    $rs = $conn->query($insert_query);
+                    if(!$rs){
+                        $conn->close();
+                        echo "照片上传出错".$conn->error."<br/>";
+                        exit();
+                    }else{
+                        $conn->close();
+                        echo'<script>alert("上传成功！");window.history.go(0)</script>'.'<br/>';
+                        exit;
+                    }
                 }
             ?>
             <style>
