@@ -14,7 +14,7 @@ $teachpwd = $_POST['teachpwd'];
 
 if($_GET['action']=='logout'){
     unset($_SESSION['teachId']);
-    echo"注销成功".'<a href="teacherLogin.html">点击此处重新登录</a>';
+    echo"注销成功".'<a href="../views/adminLogin.html">点击此处重新登录</a>';
     exit();
 }
 

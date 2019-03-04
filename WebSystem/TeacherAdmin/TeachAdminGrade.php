@@ -156,136 +156,6 @@
                     </div>
                 </div>
             </div>
-
-            <!--
-            <div class="table-responsive">
-                <table class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th>#ID</th>
-                        <th>考场号</th>
-                        <th>姓名</th>
-                        <th>日期</th>
-                        <th>成绩</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>1,001</td>
-                        <td>Lorem</td>
-                        <td>ipsum</td>
-                        <td>dolor</td>
-                        <td>sit</td>
-                    </tr>
-                    <tr>
-                        <td>1,002</td>
-                        <td>amet</td>
-                        <td>consectetur</td>
-                        <td>adipiscing</td>
-                        <td>elit</td>
-                    </tr>
-                    <tr>
-                        <td>1,003</td>
-                        <td>Integer</td>
-                        <td>nec</td>
-                        <td>odio</td>
-                        <td>Praesent</td>
-                    </tr>
-                    <tr>
-                        <td>1,003</td>
-                        <td>libero</td>
-                        <td>Sed</td>
-                        <td>cursus</td>
-                        <td>ante</td>
-                    </tr>
-                    <tr>
-                        <td>1,004</td>
-                        <td>dapibus</td>
-                        <td>diam</td>
-                        <td>Sed</td>
-                        <td>nisi</td>
-                    </tr>
-                    <tr>
-                        <td>1,005</td>
-                        <td>Nulla</td>
-                        <td>quis</td>
-                        <td>sem</td>
-                        <td>at</td>
-                    </tr>
-                    <tr>
-                        <td>1,006</td>
-                        <td>nibh</td>
-                        <td>elementum</td>
-                        <td>imperdiet</td>
-                        <td>Duis</td>
-                    </tr>
-                    <tr>
-                        <td>1,007</td>
-                        <td>sagittis</td>
-                        <td>ipsum</td>
-                        <td>Praesent</td>
-                        <td>mauris</td>
-                    </tr>
-                    <tr>
-                        <td>1,008</td>
-                        <td>Fusce</td>
-                        <td>nec</td>
-                        <td>tellus</td>
-                        <td>sed</td>
-                    </tr>
-                    <tr>
-                        <td>1,009</td>
-                        <td>augue</td>
-                        <td>semper</td>
-                        <td>porta</td>
-                        <td>Mauris</td>
-                    </tr>
-                    <tr>
-                        <td>1,010</td>
-                        <td>massa</td>
-                        <td>Vestibulum</td>
-                        <td>lacinia</td>
-                        <td>arcu</td>
-                    </tr>
-                    <tr>
-                        <td>1,011</td>
-                        <td>eget</td>
-                        <td>nulla</td>
-                        <td>Class</td>
-                        <td>aptent</td>
-                    </tr>
-                    <tr>
-                        <td>1,012</td>
-                        <td>taciti</td>
-                        <td>sociosqu</td>
-                        <td>ad</td>
-                        <td>litora</td>
-                    </tr>
-                    <tr>
-                        <td>1,013</td>
-                        <td>torquent</td>
-                        <td>per</td>
-                        <td>conubia</td>
-                        <td>nostra</td>
-                    </tr>
-                    <tr>
-                        <td>1,014</td>
-                        <td>per</td>
-                        <td>inceptos</td>
-                        <td>himenaeos</td>
-                        <td>Curabitur</td>
-                    </tr>
-                    <tr>
-                        <td>1,015</td>
-                        <td>sodales</td>
-                        <td>ligula</td>
-                        <td>in</td>
-                        <td>libero</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            -->
             <table id="table"></table>
         </div>
     </div>
@@ -390,7 +260,10 @@
         var _data={
             "stugrade":grade
         };
-        $("#table").bootstrapTable('updateByUniqueId',{id:ids, row:_data})
+        var up = ids+","+grade;
+        $("#table").bootstrapTable('updateByUniqueId',{id:ids, row:_data});
+        window.location.href="TeachAdminGrade.php?up=" + up;
+
     }
     function add_info(){
         var id = $("#addStuId").val();
@@ -401,12 +274,16 @@
             "stuface": name,
             "stugrade":grade
         };
-        $("#table").bootstrapTable('append',_data)
+        $("#table").bootstrapTable('append',_data);
+        var php_info = id+","+name+","+grade;
+        window.location.href="TeachAdminGrade.php?type=" + php_info;
     }
     function del_info(){
         var del_stu = $("#table").bootstrapTable('getSelections');
         var id = del_stu[0].stuid;
-        $("#table").bootstrapTable('remove',{field:'stuid', values:id})
+        $("#table").bootstrapTable('remove',{field:'stuid', values:id});
+        window.location.href="TeachAdminGrade.php?del=" + id;
+
     }
 
 </script>
@@ -420,3 +297,103 @@
  * Date: 3/2/2019
  * Time: 7:17 PM
  */
+include("../Mysql/MysqlConnect.php");
+if(isset($_GET['type'])){
+    $info = $_GET['type'];
+    $slice_info = explode(",",$info);
+    $stuid = $slice_info[0];
+    $stuface = $slice_info[1];
+    $stugrade = $slice_info[2];
+    $sql = "update stuexam set stugrade = '$stugrade' where stuid = '$stuid'";
+    $res = mysqli_query($conn,$sql);
+    if(!$res){
+        $conn->close();
+        echo '<script>alert("'.$conn->error.'")</script>';
+        exit();
+    }else{
+        $conn->close();
+        outJson();
+        echo '<script>alert("添加成功！")</script>';
+        exit();
+    }
+}
+//用于新增用户时修改数据库
+?>
+<?php
+    include ("../Mysql/MysqlConnect.php");
+    if(isset($_GET['up'])){
+        $up = $_GET['up'];
+        $update_info = explode(",",$up);
+        $id = $update_info[0];
+        $grade = $update_info[1];
+        $sql = "update stuexam set stugrade = '$grade' where stuid = '$id'";
+        $res = mysqli_query($conn,$sql);
+        if(!$res){
+            $conn->close();
+            echo '<script>alert("'.$conn->error.'")</script>';
+            exit();
+        }else{
+            $conn->close();
+            outJson();
+            echo '<script>alert("修改成功！")</script>';
+            exit();
+        }
+    }
+?>
+<?php
+    include("../Mysql/MysqlConnect.php");
+    if(isset($_GET['del'])){
+        $target_id = $_GET['del'];
+        $sql = "update stuexam set stugrade = '--' where stuid = '$target_id'";
+        $res = mysqli_query($conn,$sql);
+        if(!$res){
+            $conn->close();
+            echo '<script>alert("'.$conn->error.'")</script>';
+            exit();
+        }else{
+            $conn->close();
+            outJson();
+            echo '<script>alert("删除成功！")</script>';
+            exit();
+        }
+    }
+?>
+
+
+
+<?php
+function outJson(){
+    $mysql_conf = array(
+        'host' => '127.0.0.1',
+        'db' => 'websql',
+        'db_user' => 'root',
+        'db_pwd' => 'Zengshx@9869',
+    );
+    @$conn = new mysqli($mysql_conf['host'], $mysql_conf['db_user'], $mysql_conf['db_pwd'], $mysql_conf['db']);
+    if(mysqli_connect_errno()){
+        die("could not connect to mysql: \n". mysqli_connect_error());
+    }   //若发生连接异常
+    $conn->set_charset("utf-8");
+    $sql = "select stuid  from stuexam";
+    $id_info = $conn->query($sql)->fetch_assoc();
+    $id = $id_info['stuid'];
+    $full_sql = "select stu.stuid,stuface,stugrade from stu,stuexam where stu.stuid = stuexam.stuid";
+    $res = mysqli_query($conn,$full_sql);
+    if(!$res){
+        exit($conn->error);
+    }
+    $jarr = array();
+    while($rows = mysqli_fetch_array($res,MYSQLI_ASSOC)){
+        $count = count($rows);
+        for($i=0;$i<$count;$i++){
+            unset($rows[$i]);//删除冗余数据
+        }
+        array_push($jarr,$rows);
+    }
+    $str = json_encode($jarr);
+    $file = fopen("target.json","w");
+    fwrite($file,$str);
+    fclose($file);
+    $conn->close();
+}//用于修改完毕后同步表单
+?>

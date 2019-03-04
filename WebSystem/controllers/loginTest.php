@@ -31,7 +31,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
         if($res){
             $conn->close();
 
-            echo '<script>alert("欢迎登录，即将跳转到学生界面！");window.setTimeout(window.location.href="../Stu/stuinfo.php",2000)</script>';
+            echo '<script>alert("欢迎登录，即将跳转到学生界面！");window.setTimeout(window.location.href="../Stu/info.php",2000)</script>';
             //echo $stuname,' 欢迎登录'.'<br/>';
             //echo '3秒后将跳转到学生界面 <meta http-equiv="Refresh" content="3;URL=../Stu/stuinfo.php"><br/>';
             //echo '点击此处 <a href="../views/login.php?action=logout">注销</a> 登录<br/>';

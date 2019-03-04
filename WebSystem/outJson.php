@@ -45,4 +45,6 @@ function outJson(){
     $conn->close();
 
 }
+outJson();
 
+?>

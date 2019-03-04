@@ -12,16 +12,16 @@
 
     <title>Info</title>
 
-    <link href="resource/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="resource/bootstrap-table/css/bootstrap-table.min.css" rel="stylesheet">
+    <link href="../resource/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../resource/bootstrap-table/css/bootstrap-table.min.css" rel="stylesheet">
 
-    <script src="resource/js/jquery.min.js"></script>
-    <script src="resource/bootstrap/js/bootstrap.min.js"></script>
-    <script src="resource/bootstrap-table/js/bootstrap-table.js"></script>
-    <script src="resource/bootstrap-table/js/bootstrap-table-zh-CN.js"></script>
+    <script src="../resource/js/jquery.min.js"></script>
+    <script src="../resource/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../resource/bootstrap-table/js/bootstrap-table.js"></script>
+    <script src="../resource/bootstrap-table/js/bootstrap-table-zh-CN.js"></script>
 
     <!-- Custom styles for this template -->
-    <link href="resource/dashboard.css" rel="stylesheet">
+    <link href="../resource/dashboard.css" rel="stylesheet">
 
 </head>
 
@@ -40,7 +40,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Logout</a></li>
+                <li><a href="../controllers/stuLogout.php">Logout</a></li>
             </ul>
         </div>
     </div>
@@ -63,11 +63,45 @@
     </div>
 </div>
 <?php
-    include("Mysql/MysqlConnect.php");
+    session_start();
+    include("../Mysql/MysqlConnect.php");
+function outJson(){
+    $mysql_conf = array(
+        'host' => '127.0.0.1',
+        'db' => 'websql',
+        'db_user' => 'root',
+        'db_pwd' => 'Zengshx@9869',
+    );
+    @$conn = new mysqli($mysql_conf['host'], $mysql_conf['db_user'], $mysql_conf['db_pwd'], $mysql_conf['db']);
+    if(mysqli_connect_errno()){
+        die("could not connect to mysql: \n". mysqli_connect_error());
+    }   //若发生连接异常
+    $conn->set_charset("utf-8");
+    $stuid = $_SESSION['stuid'];
+    $full_sql = "select stu.stuid,stuface,stugrade from stu,stuexam where stu.stuid = stuexam.stuid and stu.stuid='$stuid'";
+    $res = mysqli_query($conn,$full_sql);
+    if(!$res){
+        exit($conn->error);
+    }
+    $jarr = array();
+    while($rows = mysqli_fetch_array($res,MYSQLI_ASSOC)){
+        $count = count($rows);
+        for($i=0;$i<$count;$i++){
+            unset($rows[$i]);//删除冗余数据
+        }
+        array_push($jarr,$rows);
+    }
+    $str = json_encode($jarr);
+    $file = fopen("stuInfo.json","w");
+    fwrite($file,$str);
+    fclose($file);
+    $conn->close();
+}
+outJson();
 ?>
 <script>
     $("#table").bootstrapTable({ // 对应table标签的id
-        url: "target.json",   //AJAX获取表格数据的url
+        url: "stuInfo.json",   //AJAX获取表格数据的url
         striped: true,                      //是否显示行间隔色(斑马线)
         pagination: true,                   //是否显示分页（*）
         sidePagination: "server",           //分页方式：client客户端分页，server服务端分页（*）
@@ -102,8 +136,6 @@
         sortName: 'sn', // 要排序的字段
         columns: [
             {
-                checkbox:true
-            }, {
                 field: 'stuid', // 返回json数据中的name
                 title: '学生ID', // 表格表头显示文字
                 align: 'center', // 左右居中
