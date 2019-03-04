@@ -60,7 +60,7 @@ function sendemail($email){
     //$message = "9kiwq1";
     $_SESSION['valCode'] = $message;    //保存密钥
     mail($to,$subject,$message);
-    echo "验证码已发送至邮箱，请注意查收！".'<br/>';
+   // echo "验证码已发送至邮箱，请注意查收！".'<br/>';
 }
 
 function resendEmail($email){
@@ -68,7 +68,7 @@ function resendEmail($email){
     sendemail($email);
 }
 sendemail($email);
-
+//echo '<script>alert("验证码，已发送至邮箱2秒后将自动跳转到验证界面");window.setTimeout(window.location.href="")</script>'
 echo "2秒后将自动跳转到验证界面".'<meta http-equiv="Refresh" content="2;URL=validate.html" />';
 exit;
 

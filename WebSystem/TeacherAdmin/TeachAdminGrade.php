@@ -63,56 +63,14 @@
             </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <h2 class="sub-header">考生成绩</h2>
+            <h2 class="sub-header">考生成绩管理</h2>
             <div class="btn-group operation">
-                <button id="btn_add" type="button" class="btn bg-primary add" data-toggle="modal" data-target="#addStu">
-                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增
-                </button>
                 <button id="btn_edit" type="button" class="btn bg-info update" data-target="#updateStuInfo" data-toggle="modal">
                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>修改
                 </button>
                 <button id="btn_delete" type="button" class="btn btn-success del" data-toggle="modal" data-target="#deleteStu">
                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>删除
                 </button>
-            </div>
-            <!--新增成绩的modal-->
-            <div class="modal fade" id="addStu" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">新增成绩</h4>
-                        </div>
-                        <div id="addBookModal" class="modal-body">
-                            <div class="form-horizontal">
-                                <div class="form-group">
-                                    <label for="addStuId" class="col-sm-2 control-label">学生ID:*</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" id="addStuId" type="text" name="stuId">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="addStuName" class="col-sm-2 control-label">学生姓名:*</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" id="addStuName" type="text" name="stuName"/>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="addStuGrade" class="col-sm-2 control-label">学生成绩:*</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" id="addStuGrade" type="text" name="stuGrade" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <div class="center-block">
-                                <button id="cancelAdd" type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                <button id="addBooksInfo" type="button" class="btn btn-primary que-update" data-dismiss="modal" onclick="add_info()">保存</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
             <!--修改成绩的modal-->
             <div class="modal fade" id="updateStuInfo" role="dialog">
@@ -160,6 +118,9 @@
         </div>
     </div>
 </div>
+<?php
+    outJson();
+?>
 <script>
 
     $("#table").bootstrapTable({ // 对应table标签的id
@@ -344,7 +305,7 @@ if(isset($_GET['type'])){
     include("../Mysql/MysqlConnect.php");
     if(isset($_GET['del'])){
         $target_id = $_GET['del'];
-        $sql = "update stuexam set stugrade = '--' where stuid = '$target_id'";
+        $sql = "update stuexam set stugrade = '-' where stuid = '$target_id'";
         $res = mysqli_query($conn,$sql);
         if(!$res){
             $conn->close();
