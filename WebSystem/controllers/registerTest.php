@@ -7,11 +7,11 @@ include("../Mysql/MysqlConnect.php");
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
-    $password = test_input($_POST["password"]);
-    $email = test_input($_POST["email"]);
-    $stuname = test_input($_POST['stuname']);
-    $idenid = test_input($_POST['stuidenid']);
-    $stuface = test_input($_POST['stuface']);
+    $password = test_input($_POST["password"]); //学生密码
+    $email = test_input($_POST["email"]);   //学生电子邮件
+    $stuname = test_input($_POST['stuname']);   //学生用户名
+    $idenid = test_input($_POST['stuidenid']); //学生身份证
+    $stuface = test_input($_POST['stuface']);   //学生真是姓名
     $emailpattern = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/";
 
     /*if(empty($_POST["phone"])){

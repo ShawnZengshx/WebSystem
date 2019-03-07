@@ -2,9 +2,10 @@
 /**
  * Created by PhpStorm.
  * User: cengshengxing
- * Date: 2019-03-04
- * Time: 08:44
+ * Date: 2019-03-05
+ * Time: 11:15
  */
+
 
 include("../Mysql/MysqlConnect.php");
 session_start();
@@ -57,7 +58,7 @@ function outJson(){
         array_push($jarr,$rows);
     }
     $str = json_encode($jarr);
-    $file = fopen("roomInfo.json","w");
+    $file = fopen("checkInfo.json","w");
     fwrite($file,$str);
     fclose($file);
     $conn->close();
@@ -117,17 +118,17 @@ outJson();
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
                 <li><a href="info.php">Overview <span class="sr-only">(current)</span></a></li>
-                <li class="active"><a href="#">Register for exam</a></li>
+                <li ><a href="EnrollForExam.php">Register for exam</a></li>
                 <li><a href="../test/PDFtest.php">生成报名表</a></li>
-                <li><a href="EnrollmentStatus.php">Check Enrollment Status</a></li>
+                <li class="active"><a href="EnrollmentStatus.php">Check Enrollment Status</a></li>
                 <li><a href="outPutExcel.php">Export Grade</a></li>
             </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <h2 class="sub-header">考场信息</h2>
+            <h2 class="sub-header">报名状态</h2>
             <div class="btn-group operation">
                 <button id="btn_add" type="button" class="btn bg-primary enroll" data-toggle="modal" data-target="#enrollExam">
-                    <span class="glyphicon glyphicon-book" aria-hidden="true"></span>报名
+                    <span class="glyphicon glyphicon-book" aria-hidden="true"></span>支付
                 </button>
             </div>
 
@@ -137,7 +138,7 @@ outJson();
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">确认要报名吗？</h4>
+                            <h4 class="modal-title">确认要支付吗？</h4>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
@@ -150,7 +151,7 @@ outJson();
         </div>
         <script>
             $("#table").bootstrapTable({ // 对应table标签的id
-                url: "roomInfo.json",   //AJAX获取表格数据的url
+                url: "checkInfo.json",   //AJAX获取表格数据的url
                 striped: true,                      //是否显示行间隔色(斑马线)
                 pagination: true,                   //是否显示分页（*）
                 sidePagination: "server",           //分页方式：client客户端分页，server服务端分页（*）
